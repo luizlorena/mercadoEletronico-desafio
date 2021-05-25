@@ -2,22 +2,24 @@ using NUnit.Framework;
 
 namespace ME.WebApi.Tests
 {
-    public class PedidoTest
+    public class StatusPedidoTest
     {
+        private const string url = "api/status";
         private dynamic _factory;
 
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Test]
-        public void SalvarNovoPedidoPadrao()
+        public void MudarStatus_PedidoPadrao()
         {
             dynamic _formContent = "";
 
             var client = _factory.CreateClient();
-            var url = "api/paths";
+            
 
             var response =  client.PostAsync(url, _formContent);
 
@@ -29,12 +31,11 @@ namespace ME.WebApi.Tests
 
 
         [Test]
-        public void SalvarNovoPedidoSemItem()
+        public void MudarStatus_PedidoInexistente()
         {
             dynamic _formContent = "";
 
             var client = _factory.CreateClient();
-            var url = "api/paths";
 
             var response = client.PostAsync(url, _formContent);
 
