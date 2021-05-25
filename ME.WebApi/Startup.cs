@@ -1,3 +1,6 @@
+using ME.Pedidos.Domain.Repository;
+using ME.Pedidos.Infra.Repository;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +34,9 @@ namespace ME.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ME.WebApi", Version = "v1" });
             });
+
+            services.AddMediatR(typeof(Startup));
+            services.AddSingleton<IPedidoRepository, PedidoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,28 +1,49 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using ME.Pedidos.Domain.Mediator.Commands;
+using ME.Pedidos.Domain.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using MediatR;
+
 
 namespace ME.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PedidoController : ControllerBase
     {
 
-        private readonly ILogger<PedidoController> _logger;
+        private readonly IMediator _mediator;
+        private readonly IPedidoRepository _pedidoRepository;
 
-        public PedidoController(ILogger<PedidoController> logger)
+        public PedidoController(IMediator mediator, IPedidoRepository pedidoRepository)
         {
-            _logger = logger;
+            _mediator = mediator;
+            _pedidoRepository = pedidoRepository;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(string id)
         {
-            throw new NotImplementedException();
+            return Ok(await _pedidoRepository.GetByCodigoPedido(id));
         }
+
+        [HttpPost]
+        [Route("Pedido/SalvarPedido")]
+        public async Task<IActionResult> Post([FromBody] PedidoNovoCommand command)
+        {
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Post([FromBody] PedidoNovoCommand command)
+        //{
+        //    var data = handler.Handle(command);
+        //    if (data != null)
+        //        return await Response(data);
+
+        //    return await Response(data);
+        //}
+
     }
 }
