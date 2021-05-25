@@ -1,4 +1,4 @@
-# mercadoEletronico-desafio - Luiz Fernando Lorena
+# mercadoEletronico-desafio
 
 
 Api-Restfull
