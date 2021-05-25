@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ME.Pedidos.Domain.Model
 {
-    public class Pedido //: Entity
+    public class Pedido
     {
         public Pedido()
         {

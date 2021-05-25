@@ -34,16 +34,5 @@ namespace ME.WebApi.Controllers
             var response = await _mediator.Send(command);
             return Ok(response);
         }
-
-        //[HttpPost]
-        //public async Task<IActionResult> Post([FromBody] PedidoNovoCommand command)
-        //{
-        //    var data = handler.Handle(command);
-        //    if (data != null)
-        //        return await Response(data);
-
-        //    return await Response(data);
-        //}
-
     }
 }

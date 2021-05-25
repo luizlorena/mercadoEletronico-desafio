@@ -15,8 +15,6 @@ namespace ME.Pedidos.Domain.Mediator.EventsHandlers
         {
             return Task.Run(() =>
             {
-                //Console.WriteLine($"NOVO PEDIDO: '{notification.PedidoDTO.D} " +
-                //    $"- {notification.Nome} - {notification.Preco}'");
             });
         }
         public Task Handle(ErroNotification notification, CancellationToken cancellationToken)
