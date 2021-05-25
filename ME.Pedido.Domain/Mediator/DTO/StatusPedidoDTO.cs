@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ME.Pedidos.Domain.Mediator.DTO
+{
+    public class StatusPedidoDTO
+    {
+        public string CodigoPedido { get; private set; }
+
+        public List<string> StatusPedido { get; private set; }
+    }
+
+    public class StatusDTO
+    {
+        public string CodigoPedido { get; private set; }
+
+        public List<string> StatusPedido { get; private set; }
+    }
+
+}

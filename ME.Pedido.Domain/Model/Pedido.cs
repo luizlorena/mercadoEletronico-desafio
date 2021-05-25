@@ -19,6 +19,7 @@ namespace ME.Pedidos.Domain.Model
             this.CodigoPedido = codigoPedido;
         }
 
+
         public string CodigoPedido { get; private set; }
         public ICollection<PedidoItem> Itens { get; private set; }
     }
