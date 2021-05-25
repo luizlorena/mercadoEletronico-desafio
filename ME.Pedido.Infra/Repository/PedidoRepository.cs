@@ -1,56 +1,39 @@
 ﻿using ME.Pedidos.Domain.Repository;
-using ME.Pedidos.Domain.Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using ME.Pedidos.Infra.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace ME.Pedidos.Infra.Repository
 {
     public class PedidoRepository : IPedidoRepository
     {
-        //private readonly MercadoEletronicoContext context;
-        private readonly dynamic context;
+        private readonly PedidoDBContexto pedidoDBContexto;
 
-
-        //public PedidoRepository(MercadoEletronicoContext context)
-        public PedidoRepository(dynamic context)
+        public PedidoRepository(PedidoDBContexto pedidoDBContexto)
 
         {
-            this.context = context;
-        }
-
-        public async Task<ICollection<Domain.Model.Pedido>> GetAll()
-        {
-            return null;
-            //return await context
-            //    .Pedidos
-            //    .Include("Itens")
-            //    .AsNoTracking()
-            //    .OrderBy(x => x.CodigoPedido)
-            //    .ToListAsync();
+            this.pedidoDBContexto = pedidoDBContexto;
         }
 
         public async Task<Domain.Model.Pedido> GetByCodigoPedido(string codigoPedido)
         {
-            return null;
-            //return await context
-            //    .Pedidos
-            //    .Include("Itens")
-            //    .AsNoTracking()
-            //    .Where(x => x.CodigoPedido == codigoPedido)
-            //    .FirstOrDefaultAsync();
+            return await pedidoDBContexto
+                .Pedidos
+                .Include("Itens")
+                .AsNoTracking()
+                .Where(x => x.CodigoPedido == codigoPedido)
+                .FirstOrDefaultAsync();
         }
 
         public async Task Save(Domain.Model.Pedido pedido)
         {
-            //await context.Pedidos.AddAsync(pedido);
+            await pedidoDBContexto.Pedidos.AddAsync(pedido);
         }
 
         public void Update(Domain.Model.Pedido pedido)
         {
-            //context.Entry(pedido).State = EntityState.Modified;
+            pedidoDBContexto.Entry(pedido).State = EntityState.Modified;
         }
     }
 }
