@@ -10,7 +10,8 @@ Fluxo de Pedidos e Mudanças de Status
 Desenvolvida com C# .Net 5.0
 
 
-Módulos:
+
+# Módulos:
 
   ME.Pedidos.MediadorEventos - Responsável pelo handler de eventos relacionados ao fluxo de negocio, utilizado package de referência MediatR-9.0 
 
@@ -23,6 +24,6 @@ Módulos:
 
   ME.WebApi.Tests - Responsável pelos testes unitários.
 
-...
+
 
 
