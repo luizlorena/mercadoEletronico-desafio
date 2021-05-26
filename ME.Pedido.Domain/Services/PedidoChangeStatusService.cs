@@ -11,23 +11,17 @@ namespace ME.Pedidos.Domain.Models.PedidoStatus.Validate
     /// </summary>
     public class PedidoChangeStatusService : IPedidoChangeStatusService 
     {
+        private IPedidoChangeStatusValidate PedidoChangeStatusValidate;
 
-        public PedidoStatusValidateResult ValidarStatus(PedidoChangeStatusModel pedidoChangeStatusModel, EnumTipoValidacao enumTipoValidacao, PedidoModel currentPedidoModel)
+        public PedidoChangeStatusService(IPedidoChangeStatusValidate pedidoChangeStatusValidate)
         {
-            if (enumTipoValidacao != this.enumTipoValidacao)
-                return ProximaValidacao.ValidarStatus(pedidoChangeStatusModel, enumTipoValidacao, currentPedidoModel);
+            PedidoChangeStatusValidate = pedidoChangeStatusValidate;
+        }
+
+        public void PedidoChangeStatus(PedidoChangeStatusModel pedidoChangeStatusModel)
+        {
 
 
-            if (pedidoChangeStatusModel.ItensAprovados > currentPedidoModel.Itens.Count)
-            {
-                return new PedidoStatusValidateResult
-                {
-                    CodigoPedido = currentPedidoModel.CodigoPedido,
-                    EnumPedidoStatus = EnumPedidoStatus.AprovadoQuantidadeAMaior
-                };
-            }
-
-            return null;
         }
     }
 

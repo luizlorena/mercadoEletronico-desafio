@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace ME.Pedidos.MediadorEventos.DTO
 {
-    public class PedidoStatusDTO
+    public class PedidoStatusChangeDTO
     {
-        public string CodigoPedido { get; private set; }
-
-        public List<string> StatusPedido { get; private set; }
-    }
-
-    public class StatusDTO
-    {
-        public string CodigoPedido { get; private set; }
-
-        public List<string> StatusPedido { get; private set; }
+        public string PedidoStatus { get; }
+        public int? ItensAprovados { get; }
+        public decimal? ValorAprovado { get; }
+        public string Pedido { get; }
     }
 
 }

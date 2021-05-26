@@ -1,7 +1,7 @@
 ﻿using ME.Pedidos.MediadorEventos.Commands;
-using ME.Pedidos.Domain.Mediator.Notifications;
-using ME.Pedidos.Domain.Model;
-using ME.Pedidos.Domain.Repository;
+using ME.Pedidos.MediadorEventos.Notifications;
+using ME.Pedidos.Domain.Models.Pedido;
+using ME.Pedidos.Domain.Interfaces.IRepository;
 using MediatR;
 using System;
 using System.Threading;

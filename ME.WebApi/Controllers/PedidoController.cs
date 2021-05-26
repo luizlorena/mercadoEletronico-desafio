@@ -1,5 +1,5 @@
 ﻿using ME.Pedidos.MediadorEventos.Commands;
-using ME.Pedidos.Domain.Repository;
+using ME.Pedidos.Domain.Interfaces.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using MediatR;

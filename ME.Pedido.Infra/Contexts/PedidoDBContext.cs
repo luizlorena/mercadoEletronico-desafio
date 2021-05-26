@@ -1,4 +1,4 @@
-﻿using ME.Pedidos.Domain.Model;
+﻿using ME.Pedidos.Domain.Models.Pedido;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -11,8 +11,8 @@ namespace ME.Pedidos.Infra.Contexts
 
         }
 
-        public DbSet<Domain.Model.PedidoModel> Pedidos { get; set; }
-        public DbSet<Domain.Model.PedidoItemModel> PedidoItens { get; set; }
+        public DbSet<PedidoModel> Pedidos { get; set; }
+        public DbSet<PedidoItemModel> PedidoItens { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

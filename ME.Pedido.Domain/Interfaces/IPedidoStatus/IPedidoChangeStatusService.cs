@@ -14,6 +14,6 @@ namespace ME.Pedidos.Domain.Interfaces.IPedidoStatus
     /// </summary>
     public interface IPedidoChangeStatusService
     {
-        PedidoStatusValidateResult ValidarStatus(PedidoChangeStatusModel pedidoStatusModel, EnumTipoValidacao enumTipoValidacao, PedidoModel currentPedidoModel);
+        void PedidoChangeStatus(PedidoChangeStatusModel pedidoStatusModel);
     }
 }
