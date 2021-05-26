@@ -16,7 +16,7 @@ namespace ME.Pedidos.Infra.Repository
             this.pedidoDBContexto = pedidoDBContexto;
         }
 
-        public async Task<Domain.Model.Pedido> GetByCodigoPedido(string codigoPedido)
+        public async Task<Domain.Model.PedidoModel> GetByCodigoPedido(string codigoPedido)
         {
             return await pedidoDBContexto
                 .Pedidos
@@ -26,12 +26,12 @@ namespace ME.Pedidos.Infra.Repository
                 .FirstOrDefaultAsync();
         }
 
-        public async Task Save(Domain.Model.Pedido pedido)
+        public async Task Save(Domain.Model.PedidoModel pedido)
         {
             await pedidoDBContexto.Pedidos.AddAsync(pedido);
         }
 
-        public void Update(Domain.Model.Pedido pedido)
+        public void Update(Domain.Model.PedidoModel pedido)
         {
             pedidoDBContexto.Entry(pedido).State = EntityState.Modified;
         }

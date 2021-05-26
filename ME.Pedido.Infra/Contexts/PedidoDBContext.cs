@@ -11,8 +11,8 @@ namespace ME.Pedidos.Infra.Contexts
 
         }
 
-        public DbSet<Domain.Model.Pedido> Pedidos { get; set; }
-        public DbSet<Domain.Model.PedidoItem> PedidoItens { get; set; }
+        public DbSet<Domain.Model.PedidoModel> Pedidos { get; set; }
+        public DbSet<Domain.Model.PedidoItemModel> PedidoItens { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
