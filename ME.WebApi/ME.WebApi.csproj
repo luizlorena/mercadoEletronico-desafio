@@ -26,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ME.Pedido.Domain\ME.Pedidos.Domain.csproj" />
     <ProjectReference Include="..\ME.Pedido.Infra\ME.Pedidos.Infra.csproj" />
+    <ProjectReference Include="..\ME.Pedidos.MediadorEventos\ME.Pedidos.MediadorEventos.csproj" />
   </ItemGroup>
 
 </Project>

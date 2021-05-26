@@ -1,4 +1,4 @@
-﻿using ME.Pedidos.Domain.Mediator.Commands;
+﻿using ME.Pedidos.MediadorEventos.Commands;
 using ME.Pedidos.Domain.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -32,6 +32,7 @@ namespace ME.WebApi.Controllers
         public async Task<IActionResult> Post([FromBody] PedidoNovoCommand command)
         {
             var response = await _mediator.Send(command);
+
             return Ok(response);
         }
     }

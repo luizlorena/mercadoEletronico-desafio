@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ME.Pedidos.Domain", "ME.Ped
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ME.Pedidos.Infra", "ME.Pedido.Infra\ME.Pedidos.Infra.csproj", "{082DB920-6BF5-4818-8E58-B2AC1E0516C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME.WebApi.Tests", "ME.WebApi.Tests\ME.WebApi.Tests.csproj", "{7D29AA92-51CD-4F01-A065-63AC76D576EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ME.WebApi.Tests", "ME.WebApi.Tests\ME.WebApi.Tests.csproj", "{7D29AA92-51CD-4F01-A065-63AC76D576EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME.Pedidos.MediadorEventos", "ME.Pedidos.MediadorEventos\ME.Pedidos.MediadorEventos.csproj", "{A5E5DC40-A053-43B9-BE7E-FBAA9ACFCF29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7D29AA92-51CD-4F01-A065-63AC76D576EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D29AA92-51CD-4F01-A065-63AC76D576EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D29AA92-51CD-4F01-A065-63AC76D576EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E5DC40-A053-43B9-BE7E-FBAA9ACFCF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E5DC40-A053-43B9-BE7E-FBAA9ACFCF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E5DC40-A053-43B9-BE7E-FBAA9ACFCF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E5DC40-A053-43B9-BE7E-FBAA9ACFCF29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
