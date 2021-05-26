@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ME.Pedidos.Domain.Model
+namespace ME.Pedidos.Domain.Models.Pedido
 {
-    public class Pedido
+    public class PedidoModel
     {
-        public Pedido()
+        public PedidoModel()
         {
 
         }
 
-        public Pedido(string codigoPedido)
+        public PedidoModel(string codigoPedido)
         {
-            Itens = new List<PedidoItem>();
+            Itens = new List<PedidoItemModel>();
             this.CodigoPedido = codigoPedido;
         }
 
 
         public string CodigoPedido { get; private set; }
-        public ICollection<PedidoItem> Itens { get; private set; }
+        public ICollection<PedidoItemModel> Itens { get; private set; }
     }
 }

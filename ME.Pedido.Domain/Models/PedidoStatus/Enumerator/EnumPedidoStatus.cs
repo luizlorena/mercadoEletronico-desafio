@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ME.Pedidos.Domain.Enumerator
+namespace ME.Pedidos.Domain.Models.PedidoStatus.Enumerator
 {
-	public enum EnumStatusPedido
+	public enum EnumPedidoStatus
 	{
 		[Description("APROVADO")]
 		Aprovado = 0,
