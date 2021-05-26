@@ -11,6 +11,7 @@ namespace ME.Pedidos.Domain.Interfaces.IPedidoStatus
 {
     /// <summary>
     /// Interface Validacao Mudança de Status do Pedido
+    /// Padrao Chain of Responsability
     /// </summary>
     public interface IPedidoChangeStatusValidate
     {
