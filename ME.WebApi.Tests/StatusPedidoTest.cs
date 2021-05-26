@@ -14,7 +14,7 @@ namespace ME.WebApi.Tests
         }
 
         [Test]
-        public void MudarStatus_PedidoPadrao()
+        public void AlterarStatus_PedidoPadrao()
         {
             dynamic _formContent = "";
 
@@ -31,7 +31,7 @@ namespace ME.WebApi.Tests
 
 
         [Test]
-        public void MudarStatus_PedidoInexistente()
+        public void AlterarStatus_PedidoInexistente()
         {
             dynamic _formContent = "";
 
